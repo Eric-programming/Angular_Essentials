@@ -83,3 +83,9 @@ namespace ConsoleApp1
     }
 }
 ```
+
+7. What is the difference between abstraction and encapsulation?
+* Encapsulation prevent access to implementation details like fields or methods whereas Abstract allow information visiable like abstract class or interface 
+
+8. What is Inheritance?
+* Inheritance is an object or a class inherit characteristics from their parent class.
