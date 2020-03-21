@@ -19,7 +19,7 @@ namespace Example{
     }
   }
   static class CompanyInfo{
-      public static string getCompanyName {get; set;}
+      public static string getCompanyName() { return "Sam Soong"}
   }
 }
 ```
