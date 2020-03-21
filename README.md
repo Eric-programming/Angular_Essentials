@@ -15,7 +15,7 @@ namespace Example{
   static class Program
   {
     static void Main(string[] arg){
-       Console.WriteLine(CompanyInfo.getCompanyName);
+       Console.WriteLine(CompanyInfo.getCompanyName());
     }
   }
   static class CompanyInfo{
