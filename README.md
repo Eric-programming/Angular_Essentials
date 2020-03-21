@@ -34,6 +34,8 @@ namespace ConsoleApp1
         {
             MyClass<string> mc = new MyClass<string>();
             mc.PrintSentence("Hi", "Sam");
+        MyClass<int> mc1 = new MyClass<int>();
+        mc1.PrintSentence(1, 2);
         }
         
     }
