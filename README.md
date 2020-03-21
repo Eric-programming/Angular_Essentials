@@ -23,3 +23,26 @@ namespace Example{
   }
 }
 ```
+5. What is generics?
+* Generics allow us to declare type safe data structures without commit to speicifc data type.
+```c#
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MyClass<string> mc = new MyClass<string>();
+            mc.PrintSentence("Hi", "Sam");
+        }
+        
+    }
+    class MyClass<Any>
+    {
+        public void PrintSentence(Any s1, Any s2 )
+        {
+            Console.WriteLine("1: {0}, 2: {1}", s1, s2);
+        }
+    }
+}
+```
