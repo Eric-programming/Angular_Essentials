@@ -48,3 +48,38 @@ namespace ConsoleApp1
     }
 }
 ```
+
+6. What is Polymorphism?
+* Different Classes that share with same interface or Classes have different behavior while sharing with the same interface
+```c#
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person p = new Person();
+
+            Console.WriteLine(p.getName());
+
+            John j = new John();
+            Console.WriteLine(j.getName());
+        }
+        
+    }
+    class Person
+    {
+        
+        public virtual string getName() {
+            return "He/she is Awesome!";
+        }
+    }
+    class John : Person
+    {
+        public override string getName()
+        {
+            return "John is Awesome";
+        }
+    }
+}
+```
