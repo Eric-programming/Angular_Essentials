@@ -34,7 +34,8 @@ smaller image size for creating & deploying a container because it is cross-plat
 .NET 5 (or .NET Core 2.1 or 3.1) also allow each machine to have different versions 
 but .NET Framework doesn't have this feature.
 - Even though .NET 5 is a lot better than .NET Framework, but .NET Framework is more mature, 
-there are a lot of packages OR libraries available for .NET Framework than .NET 5 (ex. ASP.NET Web Forms, ASP.NET Web Pages, WCF, etc.)
+there are a lot of packages OR libraries available for .NET Framework than .NET 5 
+(ex. ASP.NET Web Forms, ASP.NET Web Pages, WCF, etc.)
 As well as some third party or Microsoft services that are not all support .NET 5.
 
 ```
