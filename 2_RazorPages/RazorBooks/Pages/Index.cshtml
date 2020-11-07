@@ -1,10 +1,29 @@
-﻿@page "{Id?}"
+﻿@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">@Model.Message</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Book in Model.Books)
+            {
+                <tr>
+                    <td> @Book.Id </td>
+                    <td>@Book.Name</td>
+                    <td>
+                        <button type="submit" asp-page-handler="delete" asp-route-id="@Book.Id">delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-page="Create">Create New</a>
+</form>

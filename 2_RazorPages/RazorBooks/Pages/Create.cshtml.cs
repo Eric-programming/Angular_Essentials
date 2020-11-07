@@ -7,7 +7,6 @@ namespace RazorBooks.Pages
 {
     public class CreateModel : PageModel
     {
-
         private readonly BooksDbContext _context;
 
         public CreateModel(BooksDbContext context)
