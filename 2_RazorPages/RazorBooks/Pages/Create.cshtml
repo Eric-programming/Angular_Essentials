@@ -9,5 +9,6 @@
 <form method="post">
     Name:
     <input asp-for="Books.Name" />
+    <span class="text-danger" asp-validation-for="Books.Name"></span>
     <input type="submit" />
 </form>
