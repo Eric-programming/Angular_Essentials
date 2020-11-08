@@ -1,11 +1,12 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 namespace RazorBooks.Models
 {
     public class Books
     {
-         public int Id { get; set; }
+        public int Id { get; set; }
 
-        [Required, StringLength(10)]
+        [Required]
         public string Name { get; set; }
     }
 }

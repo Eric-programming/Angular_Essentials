@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_basic\\demo\\demo.csproj": {}
+    "c:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_Basic\\demo\\demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_basic\\demo\\demo.csproj": {
+    "c:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_Basic\\demo\\demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_basic\\demo\\demo.csproj",
+        "projectUniqueName": "c:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_Basic\\demo\\demo.csproj",
         "projectName": "demo",
-        "projectPath": "C:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_basic\\demo\\demo.csproj",
+        "projectPath": "c:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_Basic\\demo\\demo.csproj",
         "packagesPath": "C:\\Users\\Eric0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_basic\\demo\\obj\\",
+        "outputPath": "c:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_Basic\\demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Eric0\\AppData\\Roaming\\NuGet\\NuGet.Config"

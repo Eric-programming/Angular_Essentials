@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bkZ6hAnFSSPlHIb3QYTQWyV/OGFh/TTc07hzDrUm8t/4gzft7yRHv7wLW6iKkbSTmBxi+vBsWzs15DH1TLVPZw==",
+  "dgSpecHash": "xP4Wb3L5b2+tBlx9XyngJ+xi0YcaCFZXiUQfE10L1qkoIRJUAEP9d2izcgBtkmHuwx9+mk7pfoKjBSEpt8up0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_basic\\demo\\demo.csproj",
+  "projectFilePath": "c:\\Users\\Eric0\\Desktop\\ASP.NETCore_Tutorial\\1_Basic\\demo\\demo.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

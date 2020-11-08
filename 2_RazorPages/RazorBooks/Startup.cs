@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 namespace RazorBooks
 {
     public class Startup
@@ -18,8 +18,11 @@ namespace RazorBooks
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddDbContext<BooksDbContext>(options =>
+            //           options.UseInMemoryDatabase("name"));
+
             services.AddDbContext<BooksDbContext>(options =>
-                      options.UseInMemoryDatabase("name"));
+                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddRazorPages();
         }
 
