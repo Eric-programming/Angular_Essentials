@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Bookstore.Models;
+using System.Text.Encodings.Web;
 
 namespace Bookstore.Controllers
 {
@@ -18,11 +19,15 @@ namespace Bookstore.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public string Index(string name = "people", int age = 0)
         {
+            return HtmlEncoder.Default.Encode($"Hello {name} is currently {age} years old");
+        }
+        public IActionResult Welcome(int ID = 0)
+        {
+            ViewData["WelcomeId"] = ID;
             return View();
         }
-
         public IActionResult Privacy()
         {
             return View();
