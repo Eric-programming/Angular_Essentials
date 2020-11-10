@@ -9,5 +9,6 @@ namespace Bookstore.Models
         public SelectList Genres { get; set; }//"Represents a list that lets users select one item."
         public string BooksGenre { get; set; }
         public string Search { get; set; }
+
     }
 }

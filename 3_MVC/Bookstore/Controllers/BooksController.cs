@@ -1,10 +1,10 @@
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Bookstore.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 
 namespace Bookstore.Controllers
 {
@@ -38,20 +38,19 @@ namespace Bookstore.Controllers
                              select m.Genre;
             //The SelectList of genres will get the distinct genres 
 
-            // var genreQuery = _context.Books.Select(x=>x.Genre).Distinct();
-
             var books = from m in _context.Books
                         select m;
-
+            //Search Title
             if (!string.IsNullOrEmpty(Search))
             {
-                books = books.Where(s => s.Title.Contains(Search));
+                books = books.Where(s => s.Title.ToLower().Contains(Search.ToLower()));
             }
-
+            //Select Genre
             if (!string.IsNullOrEmpty(BooksGenre))
             {
                 books = books.Where(x => x.Genre == BooksGenre);
             }
+
 
             var bookGenreViewModel = new BookGenreViewModel
             {
