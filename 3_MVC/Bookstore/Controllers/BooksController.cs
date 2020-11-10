@@ -1,12 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Bookstore;
 using Bookstore.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Bookstore.Controllers
 {
@@ -19,10 +17,49 @@ namespace Bookstore.Controllers
             _context = context;
         }
 
-        // GET: Books
-        public async Task<IActionResult> Index()
+        // GET: Books with Query
+        // public async Task<IActionResult> Index(string search)
+        // {
+        //     var books = from x in _context.Books
+        //                 select x;
+
+        //     if (!String.IsNullOrEmpty(search))
+        //     {
+        //         books = books.Where(s => s.Title.ToLower().Contains(search.ToLower()));
+        //     }
+
+        //     return View(await books.ToListAsync());
+        // }
+        public async Task<IActionResult> Index(string BooksGenre, string Search)
         {
-            return View(await _context.Books.ToListAsync());
+            // Use LINQ to get list of genres.
+            var genreQuery = from m in _context.Books
+                             orderby m.Genre
+                             select m.Genre;
+            //The SelectList of genres will get the distinct genres 
+
+            // var genreQuery = _context.Books.Select(x=>x.Genre).Distinct();
+
+            var books = from m in _context.Books
+                        select m;
+
+            if (!string.IsNullOrEmpty(Search))
+            {
+                books = books.Where(s => s.Title.Contains(Search));
+            }
+
+            if (!string.IsNullOrEmpty(BooksGenre))
+            {
+                books = books.Where(x => x.Genre == BooksGenre);
+            }
+
+            var bookGenreViewModel = new BookGenreViewModel
+            {
+                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Books = await books.ToListAsync()
+            };
+
+            return View(bookGenreViewModel);
         }
 
         // GET: Books/Details/5
