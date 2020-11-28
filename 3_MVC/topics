@@ -1,6 +1,0 @@
-Pre-req: .NET Core 3.1 SDK or later
-
-dotnet new mvc -o [name]
-
-
-dotnet aspnet-codegenerator controller -name BooksController -m Book -dc BookContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
