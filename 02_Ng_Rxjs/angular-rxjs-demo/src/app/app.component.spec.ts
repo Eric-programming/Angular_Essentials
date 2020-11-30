@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'observable-demo'`, () => {
+  it(`should have as title 'angular-rxjs-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('observable-demo');
+    expect(app.title).toEqual('angular-rxjs-demo');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('observable-demo app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular-rxjs-demo app is running!');
   });
 });

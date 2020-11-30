@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "observable-demo": {
+    "angular-rxjs-demo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/observable-demo",
+            "outputPath": "dist/angular-rxjs-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "observable-demo:build"
+            "browserTarget": "angular-rxjs-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "observable-demo:build:production"
+              "browserTarget": "angular-rxjs-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "observable-demo:build"
+            "browserTarget": "angular-rxjs-demo:build"
           }
         },
         "test": {
@@ -109,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "observable-demo:serve"
+            "devServerTarget": "angular-rxjs-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "observable-demo:serve:production"
+              "devServerTarget": "angular-rxjs-demo:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "observable-demo"
+  "defaultProject": "angular-rxjs-demo"
 }

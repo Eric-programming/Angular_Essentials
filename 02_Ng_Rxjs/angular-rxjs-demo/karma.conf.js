@@ -19,7 +19,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/observable-demo'),
+      dir: require('path').join(__dirname, './coverage/angular-rxjs-demo'),
       subdir: '.',
       reporters: [
         { type: 'html' },
