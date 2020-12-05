@@ -12,6 +12,10 @@ import { SwitchMapDemoComponent } from './switch-map-demo/switch-map-demo.compon
 import { DebounceTimeDemoComponent } from './debounce-time-demo/debounce-time-demo.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { TakeDemoComponent } from './take-demo/take-demo.component';
+import { MergeMapDemoComponent } from './merge-map-demo/merge-map-demo.component';
+import { ConcatDemoComponent } from './concat-demo/concat-demo.component';
+import { ForkJoinDemoComponent } from './fork-join-demo/fork-join-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +24,10 @@ import { FormsModule } from '@angular/forms';
     ShareDemoComponent,
     SwitchMapDemoComponent,
     DebounceTimeDemoComponent,
+    TakeDemoComponent,
+    MergeMapDemoComponent,
+    ConcatDemoComponent,
+    ForkJoinDemoComponent,
   ],
   imports: [
     BrowserModule,

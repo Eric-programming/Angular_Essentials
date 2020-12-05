@@ -1,7 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { debounceTime, map, switchMap } from 'rxjs/operators';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  map,
+  switchMap,
+} from 'rxjs/operators';
 interface ITodo {
   userId: number;
   id: number;
@@ -21,6 +26,7 @@ export class DebounceTimeDemoComponent implements OnInit {
   search = (text$: Observable<string>) =>
     text$.pipe(
       debounceTime(300),
+      distinctUntilChanged(),
       switchMap((term) => this.getTitle(term))
     );
 
