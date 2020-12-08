@@ -9,4 +9,5 @@ export class ChildComponent implements OnInit {
 
   ngOnInit(): void {}
   data: string = 'This data was from child component';
+  data2: string = 'hello';
 }

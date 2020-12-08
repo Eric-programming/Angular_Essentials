@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class SubjectInServiceService {
-  private dataSource = new BehaviorSubject('Default Data');
+  private dataSource = new BehaviorSubject<string>('Default Data');
   currentData = this.dataSource.asObservable();
   constructor() {}
   updateData(data: string) {
