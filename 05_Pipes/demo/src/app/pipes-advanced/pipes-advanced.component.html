@@ -1,0 +1,5 @@
+<!-- Impure vs Pure -->
+<div>Search users: <input [(ngModel)]="searchUser" /></div>
+<button (click)="changeUsers()">Change user</button>
+<p>Result: {{ people | filterPerson: searchUser | json }}</p>
+<button (click)="changeButtonName()">Clicked {{ times }} times</button>

@@ -1,0 +1,19 @@
+<!-- Basics -->
+<p>Right now is {{ currentDate }}</p>
+<p>Right now is {{ currentDate | date }}</p>
+<p>Right now is {{ currentDate | date: "shortDate" }}</p>
+<p>Right now is {{ currentDate | date: "fullDate" }}</p>
+<!-- Chaining Pipes -->
+<p>Chaining pipes {{ currentDate | date | uppercase }}</p>
+<!-- Custom Pipes -->
+<p *ngFor="let x of isPalindromeTests">
+  Custom Pipes "{{ x }}" {{ x | isPalindrome: "yOrN" }}
+</p>
+<!-- Use pipes within the component -->
+<p>Use pipes in the component {{ word }}</p>
+<!-- Detecting changes -->
+<!-- Angular executes the pipe whenever it detects a change for the input value or reference-->
+<div>Check if palindrome: <input [(ngModel)]="palindromeString" /></div>
+<p>Result: {{ palindromeString | isPalindrome: "yesOrNo" }}</p>
+<button (click)="send()">Send Message</button>
+<p>{{ message$ | async }}</p>
